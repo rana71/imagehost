@@ -1,0 +1,256 @@
+body {
+    padding-top: 51px;
+}
+
+.topbar {
+    border-bottom: 1px solid  #D8D8D8; 
+}
+
+.topbar li.active  a {
+    background-color: #eee !important;
+    position: relative;
+    top: 1px;
+    border: solid #d8d8d8;
+    border-width: 1px 1px 0;
+}
+
+.topbar .upload-button {
+    margin-top: 8px; 
+}
+
+.topbar .upload-button .icon {
+    margin-right: 8px; 
+}
+
+
+.topbar .dropdown-menu {
+    padding: 0; 
+}
+
+.topbar .dropdown-menu .divider {
+    margin: 0; 
+}
+
+.topbar .dropdown-menu a {
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+
+.topbar .navbar .navbar-collapse {
+  text-align: center;
+}
+
+.topclaim {
+    border-bottom: 1px solid  #D8D8D8; 
+    padding: 10px 0; 
+}
+.images-list .thumb {
+    height: 160px; 
+    padding: 2px; 
+    margin-bottom: 15px; 
+}
+
+.images-list .thumb a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    height: 100%; 
+}
+
+.images-list .thumb img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
+}
+
+
+.small-list {
+    max-height: 600px; 
+    overflow-x: hidden; 
+    overflow-y: scroll;
+    margin-top: 15px; 
+}
+
+.small-list .loading {
+    margin-top: 15px; 
+}
+
+.small-list ul {
+    list-style-type:none; 
+    margin: 10px 0 0; 
+    padding: 0; 
+}
+
+.small-list ul li {
+    margin: 0 0 10px 0; 
+    padding: 0 0 10px 0; 
+    border-bottom: 1px solid #eee; 
+}
+
+.small-list ul li:last-child {
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+    border-bottom-width: 0; 
+}
+
+.small-list a {
+    display: block; 
+}
+
+.small-list .image {
+    width: 80px; 
+    height: 80px; 
+    float: left; 
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.small-list .image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
+}
+
+.small-list .body {
+    margin-left: 90px; 
+}
+
+.small-list .body h4 {
+    margin-top: 0; 
+}
+
+.tags-list {
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.tags-list li {
+    padding: 10px 15px;
+}
+
+.loading {
+    text-align: center; 
+    cursor: wait; 
+}
+
+.loading .glyphicon-refresh-animate {
+    margin-right: 5px; 
+    -animation: loading-spin 1s infinite linear;
+    -webkit-animation: loading-spin2 1s infinite linear;
+}
+
+@-webkit-keyframes loading-spin2 {
+    0% { 
+        -webkit-transform: rotate(0deg) scale(1);
+    }
+    25% {
+        -webkit-transform: rotate(90deg) scale(.85);
+    }
+    
+    75% {
+        -webkit-transform: rotate(270deg) scale(1.15);
+    }
+    100% { 
+        -webkit-transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes loading-spin {
+     0% { 
+         transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(.85) rotate(90deg);
+    }
+    
+    75% {
+        transform: scale(1.15) rotate(270deg);
+    }
+    100% { 
+        transform: scale(1) rotate(360deg);
+    }
+    
+}
+
+
+.loading span.dots {
+/*    width: 40px; */
+    /*content: '...';*/
+    display: inline-block;
+    /*scale(1,1)*/
+    -animation: dots-change 1s infinite linear;
+    -webkit-animation: dots-change 1s infinite linear;
+}
+
+@-webkit-keyframes dots-change {
+    0% { 
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(0,1);
+    }
+    100% { 
+        transform: scale(1,1);
+    }
+}
+
+.file-details .preview-container {
+    text-align:center; 
+    margin-bottom: 15px; 
+}
+
+.file-details .preview {
+    max-width: 100%; 
+    border-radius: 4px; 
+    margin: auto; 
+    
+}
+
+.file-details .file-upload-info {
+    font-size: 1.5rem;
+    margin-bottom: 15px; 
+    text-align:right; 
+}
+
+.file-details .file-actions {
+    margin-bottom: 15px; 
+}
+
+.file-details .voting {
+    margin-right: 15px; 
+}
+
+.file-details .voting .btn {
+    font-size: 19px; 
+}
+
+.file-tags .tag {
+    margin: 0 4px; 
+    font-weight: normal;
+}
+
+.file-more-options .icon {
+    margin-right: 5px; 
+}
+
+.navigation .btn {
+    width: 50%; 
+}
+
+.navigation .btn .icon {
+    margin: 0 5px; 
+}

@@ -1,0 +1,136 @@
+@import "_common";
+@import "compass/css3/inline-block";
+
+.m-top {
+    text-align: center; 
+    padding: 36px 10px 30px; 
+    position: fixed;
+    background-color: #fff; 
+    z-index: 999;
+    width: 100%; 
+/*    line-height: 1em;*/
+    font-size: 1.6em;
+     
+    .left {
+/*        line-height:2em;*/
+        margin-top: 4px; 
+        @extend .pull-left;
+        
+        ul {
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            color: $brand-primary; 
+            
+        }
+        
+        li {
+            display: inline;
+            margin-right: 22px; 
+        }
+        
+        a {
+            color: $brand-primary; 
+        }
+        
+        .search {
+            .link {
+                &:before {
+                    margin-right: 10px; 
+                    font-size: 1.2em;
+                    position: relative; 
+                    top: 5px; 
+                    @extend .glyphicon; 
+                    @extend .glyphicon-search;
+                }
+                &:hover {
+                    text-decoration:underline; 
+                    cursor:pointer; 
+                }
+            }
+        }
+        
+        .browse :before {
+            margin-right: 10px; 
+            font-size: 1.2em;
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon; 
+            @extend .glyphicon-eye-open;
+        }
+        
+        .random :before {
+            margin-right: 10px; 
+            font-size: 1.2em;
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon; 
+            @extend .glyphicon-random;
+        }
+    }
+ 
+    .logo {
+        line-height:2em;
+        margin: 0 auto; 
+        @include inline-block;
+    }
+     
+    .right {
+        line-height:2em;
+        @extend .pull-right;
+    }
+    
+    .upload {
+        margin-right: 10px;
+        font-size: 1em;
+        @extend .btn;
+        @extend .btn-primary;
+        
+        &:before {
+            font-size:1.2em;
+            margin-right: 12px;
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon; 
+            @extend .glyphicon-cloud-upload;
+        }
+    }
+    
+    .my-imged {
+        margin-right: 10px;
+        font-size: 1em;
+        @extend .btn;
+        @extend .btn-success;
+        
+        &:before {
+            font-size:1.2em;
+            margin-right: 12px; 
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon;
+            @extend .glyphicon-user;
+        }
+    }
+}
+
+.m-top-margin {
+    padding-top: 115px; 
+}
+
+@media (max-width: 768px) {
+    .m-top {
+        padding: 5px; 
+    }
+    
+    .m-top-margin {
+        padding-top: 101px; 
+    }
+    
+    .m-top .left, .m-top .logo, .m-top .right {
+        display: block;  
+        text-align: center; 
+        float: none !important;
+        margin-top: 5px; 
+        margin-bottom: 5px; 
+    }
+}

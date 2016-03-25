@@ -1,0 +1,108 @@
+@import '_variables';
+
+.m-welcome {
+    
+    background-color: #fff; 
+    
+    .image {
+        background: url(../img/welcome1.jpg) 50% 0 no-repeat fixed; 
+        height: 540px; 
+        margin: 0 auto; 
+        width: 100%; 
+        position: relative;  
+        text-align: center; 
+        
+        p {
+            font-size: 6em;  
+            font-family: "Book Antiqua";
+            font-style:italic;  
+            font-weight: $font-weight-bold; 
+            width: 60%;  
+            margin: 0 auto; 
+            color: #fff; 
+            padding-top: 120px; 
+            line-height: 1em;  
+        }
+        
+        .upload {
+            @extend .btn;
+            @extend .btn-primary;
+            border: 2px solid #fff; 
+            font-size: 2.3em;
+            line-height: 2em;
+            font-weight: $font-weight-bold;
+            margin-top: 35px; 
+            padding: 7px 20px; 
+            @include border-radius(10px);
+
+            &:before {
+                font-size:1.5em;
+                margin-right: 10px;
+                position: relative; 
+                top: 3px; 
+                @extend .glyphicon; 
+                @extend .glyphicon-cloud-upload;
+            }
+        }  
+    }
+    
+    .steps {
+        @extend .container;
+        list-style-type: none; 
+        margin: 40px auto; 
+        padding: 0; 
+        
+        li {
+            text-align: center; 
+            @extend .col-sm-4;
+        }
+        
+        strong {
+            color: $brand-primary;
+            display: block; 
+            font-weight: $font-weight-bold;
+            font-size: 2em;
+            margin: 25px 0 10px; 
+        }
+        
+        p {
+            font-size: 1.3em; 
+            font-weight: $font-weight-light; 
+        }
+        
+        .browse:before {
+            font-size: 8em;
+            color: $brand-primary;
+            display: block; 
+            @extend .glyphicon; 
+            @extend .glyphicon-eye-open;
+        }
+        
+        .upload:before {
+            font-size: 8em;
+            color: $brand-primary;
+            display: block; 
+            @extend .glyphicon; 
+            @extend .glyphicon-cloud-upload;
+        }
+        .share:before {
+            font-size: 8em;
+            color: $brand-primary;
+            display: block; 
+            @extend .glyphicon; 
+            @extend .glyphicon-share-alt;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .m-welcome .image p {
+        width: 70%; 
+    }
+}
+@media (max-width: 768px) {
+    .m-welcome .image p {
+        width: 99%; 
+        padding-top: 60px; 
+    }
+}

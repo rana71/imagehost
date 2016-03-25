@@ -1,0 +1,13 @@
+@import '_common';
+
+.m-stream {
+    
+    @extend .container-fluid;
+    
+    h2 {
+        font-weight: 500; 
+        font-size: 3.2em;
+        text-align: center;  
+        color: $brand-primary; 
+    }
+} 

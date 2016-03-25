@@ -1,0 +1,1 @@
+<small>{{$arrStats.shows_count}} wyświetleń</small>

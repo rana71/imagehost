@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Security-Policy" content="
+              default-src 'self' imged.pl *.imged.pl 'unsafe-inline' 'unsafe-eval'; 
+              style-src 'self' imged.pl *.imged.pl *.googleapis.com *.adform.net 'unsafe-inline'; 
+              font-src 'self' imged.pl *.imged.pl *.gstatic.com; 
+              script-src 'self' imged.pl *.imged.pl *.facebook.net *.google-analytics.com *.behavioralengine.com  *.facebook.com *.erne.co *.crazyegg.com *.google.com *.twitter.com *.adform.net *.googletagmanager.com 'unsafe-inline' 'unsafe-eval'; 
+              img-src 'self' imged.pl *.imged.pl *.google-analytics.com *.facebook.com *.behavioralengine.com *.erne.co *.adocean.pl *.adform.net *.doubleclick.net *.inistrack.net *.pinterest.com *.adnxs.com *.360yield.com *.yieldlab.net *.vindicosuite.com *.rubiconproject.com *.adscale.de *.openx.net *.ad.yieldmanager.com; 
+              frame-src 'self' imged.pl *.imged.pl *.behavioralengine.com *.facebook.com *.youtube.com *.youtube.pl *.youtu.be youtube.com youtube.pl youtu.be *.google.com *.wykop.pl *.twitter.com;  
+              child-src 'self' imged.pl *.imged.pl *.behavioralengine.com *.facebook.com; 
+              connect-src 'self' imged.pl *.imged.pl *.sascdn.com; 
+              media-src 'self' imged.pl *.imged.pl *.adform.net
+        ">

@@ -1,0 +1,19 @@
+{
+    "require": {
+        "webcitron/subframe": "dev-master",
+        "aws/aws-sdk-php": "^3.3",
+        "jbbcode/jbbcode": "^1.3",
+        "ezyang/htmlpurifier": "^4.7",
+        "masterexploder/phpthumb": "^2.1"
+    },
+    "repositories": [
+       {
+           "type": "vcs",
+           "url": "git://github.com/webcitron/subframe.git"
+       }
+   ],  
+    "autoload": {
+        "classmap" : [
+        ]
+    }
+}

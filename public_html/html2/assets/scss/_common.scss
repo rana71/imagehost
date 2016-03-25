@@ -1,0 +1,28 @@
+@import "_fonts";
+@import "_variables";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass"; 
+
+/*$sprites: sprite-map("sprites/*.png");
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+  $sprite-image: sprite-file($map, $sprite);
+  $sprite-map: sprite-url($map);
+  $sprite-position: sprite-position($map, $sprite);
+  background: $sprite-map $sprite-position $repeat;
+  @if $height==true {
+    $sprite-height: image-height($sprite-image);
+    height: $sprite-height;
+  }
+  @if $width==true {
+    $sprite-width: image-width($sprite-image);
+    width: $sprite-width;
+  }
+}*/
+
+$sprites-sprite-dimensions: true;
+@import 'sprites/*.png';
+@include all-sprites-sprites;
+
+body { 
+    font-size: 10px;
+}

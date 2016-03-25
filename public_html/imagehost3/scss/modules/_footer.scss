@@ -1,0 +1,147 @@
+@import '_variables';
+
+.m-footer {
+    .stats-cnt {
+        background-color: #fff;
+    }
+
+    .stats {
+        margin: 0 auto;
+        padding: 40px 0;
+        @extend .container;
+
+        p {
+            text-align: center;
+            @extend .col-xs-12;
+            @extend .col-md-6;
+
+        }
+
+        i {
+
+            font-size: 6.2em;
+            color: #fff; 
+            font-style: normal;
+            font-weight: $font-weight-extrabold;
+            line-height: 1em;
+
+            @include text-shadow($brand-primary 2px 0, $brand-primary 0 2px, $brand-primary -2px 0, $brand-primary 0 -2px, $brand-primary -2px -2px, $brand-primary 2px -2px, $brand-primary 2px 2px, $brand-primary -2px 2px);
+        }
+
+        span {
+            font-weight: $font-weight-bold;
+            font-size: 1.6em;
+            line-height: 1.3em;
+            text-align: center; 
+            display: block; 
+            margin-left: 20px; 
+            color: $brand-primary;
+        }
+    }
+
+    .menu-wrap {
+        font-size: 1.4em;
+        padding-top: 40px; 
+        padding-bottom: 10px; 
+        @extend .container;
+
+        .menu {
+            @extend .col-sm-6;
+
+            ul {
+                list-style-type: none; 
+                margin: 0 70px 0 0; 
+                padding: 0; 
+                float: left; 
+            }
+
+            li {
+                line-height: 1.8em;
+            }
+
+            a {
+                color: $text-color;
+                font-weight: $font-weight-light; 
+            }
+        }
+
+        .fb-stream {
+            @extend .col-sm-4;
+            @extend .col-sm-offset-2;
+        }
+        
+        .copy {
+            text-align: center; 
+            font-weight: $font-weight-light; 
+            margin-top: 40px; 
+            
+            span {
+                font-weight: $font-weight-semibold;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .m-footer {
+
+        .stats {
+            width: 70%; 
+        }
+
+        .menu-wrap {
+            width: 70%; 
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .m-footer {
+        .stats i, .stats span {
+            float: none !important; 
+            display: block; 
+            width: 100%; 
+            margin: 0; 
+            text-align: center; 
+        }
+
+        .stats {
+            padding: 10px 0; 
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .m-footer {
+        .menu-wrap {
+            text-align: center; 
+            padding-top: 10px; 
+            padding-bottom: 10px; 
+        }
+        
+        .menu {
+            @include clearfix;
+            margin-bottom: 30px; 
+            
+            ul {
+                margin: 0 !important; 
+                width: 50%; 
+            }
+        }
+
+        .misc {
+            text-align: none; 
+
+            .socials .fb {
+                float: left; 
+            }
+
+            .copy {
+                float: right; 
+                margin: 0; 
+            }
+        }
+    }
+}

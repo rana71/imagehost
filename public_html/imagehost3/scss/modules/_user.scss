@@ -1,0 +1,222 @@
+@import '_variables';
+
+.m-user {
+    font-size: 1.3em;
+    
+    .main-content {
+        position: relative; 
+        @extend .container;
+        
+        form {
+            margin-bottom: 20px; 
+            .r {
+                margin-bottom: 0; 
+            }
+            .col {
+                margin-bottom: 15px; 
+                @extend .col-sm-6;
+            }
+            
+            .b {
+                padding-left: 15px; 
+                padding-right: 15px; 
+            }
+            
+            input[type="submit"] {
+                @extend .btn;
+                @extend .btn-success;
+                @extend .pull-right;
+            }
+            
+            .sign-fb {
+                background-color: #4763b2; 
+                color: #fff; 
+                padding-left: 25px; 
+                padding-right: 25px; 
+                font-size: 1.1em;
+                @extend .btn;
+                @extend .pull-left;
+            }
+        }
+        
+        .info {
+            font-weight: $font-weight-light; 
+            text-align: center; 
+            margin-top: 25px; 
+            margin-bottom: 40px; 
+            color: $brand-primary; 
+        }
+        
+        &:after {
+            position: absolute; 
+            bottom: -62px; 
+            left: 50%; 
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 22px 22px 0 22px;
+            border-color: $body-bg transparent transparent transparent;
+            line-height: 0px;
+            _border-color: $body-bg #000 #000 #000;
+            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+            @include translateX(-22px);
+        }
+    }
+    
+    #commercial-gallery-modal {
+        font-size: 1.1em;
+    }
+    
+    .show-stats:hover, .show-stats.active {
+        cursor: pointer;
+        color: $brand-primary;
+    }
+    
+    
+    .stats-container {
+        text-align: center; 
+        width: 100%; 
+    }
+    
+    .accounts-compare {
+        background-color: #fff;
+        @extend .container-fluid;
+        
+        ul {
+            background-color: $body-bg;
+        }
+    }
+    
+    .go-sign-in {
+        margin-left: 30px; 
+        font-weight: $font-weight-normal;
+        font-size: 0.9em;
+    }
+    
+    .user-artifacts {
+        
+        .dropdown {
+            margin-bottom: 15px; 
+            
+            button {
+                font-size: 1em;
+                font-weight: $font-weight-light !important;
+            }
+            
+            ul a {
+                font-size: 0.8em;
+                font-weight: $font-weight-light !important;
+            }
+        }
+        
+        table {
+            
+            font-weight: $font-weight-light; 
+            @extend .table;
+            @extend .table-hover;
+            @extend .row;
+            
+            td, th {
+                @extend .text-center;
+            }
+            
+            th {
+                border-bottom: 0 !important; 
+                
+                &.col2 {
+                    text-align: left; 
+                }
+            }
+            
+            .col1 { @extend .col-xs-2; }
+            .col2 { @extend .col-xs-4; }
+            .col3 { @extend .col-xs-2; }
+            .col4 { @extend .col-xs-2; }
+            .col5 { @extend .col-xs-2; }
+            
+            
+            .art-thumb {
+                img {
+                    max-width: 100%; 
+                }
+            }
+            .art-title {
+                text-align: left; 
+                line-height: 1em; 
+                
+                a {
+                    line-height: 44px; 
+                    white-space: nowrap; 
+                    text-overflow: ellipsis;
+                    overflow: hidden; 
+
+                    &:before {
+                        position: relative; 
+                        top: 2px; 
+                        margin-right: 5px; 
+                        @extend .glyphicon;
+                        @extend .glyphicon-new-window;
+                    }
+                }
+            }
+            
+            .pop {
+                line-height: 44px; 
+            }
+            
+            .add {
+                line-height: 44px; 
+            }
+            
+            .link input {
+                font-size: 1em; 
+            }
+            
+            .opts {
+                button {
+                    margin-bottom: .5em;
+                    visibility: hidden;
+                    position: relative; 
+                    top: 2px; 
+                    height: 34px; 
+                    padding: 6px 12px; 
+                    font-weight: $font-weight-light; 
+                    width: 100%; 
+                    @extend .btn;
+                    
+                    &:before { 
+                        margin-right: 10px; 
+                        @extend .glyphicon;
+                    }   
+                }
+                
+                .allegro-gallery {
+                    background-color: #ff5900; 
+                    background-image: url(/imagehost3/img/allegro-logo-white.png); 
+                    background-repeat: no-repeat; 
+                    background-position: center;
+                    border-color: #ff3b10;
+                    
+                    &:hover {
+                        background-color: #ff3b10;
+                    }
+                }
+                
+                .remove {
+                    @extend .btn-danger;
+                    &:before {
+                        @extend .glyphicon-trash;
+                    }
+                }
+            }
+            
+            tr:hover .opts button {
+                visibility: visible;
+            }
+            
+        }
+        
+    }
+    
+}

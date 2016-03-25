@@ -1,0 +1,37 @@
+@import '_variables';
+
+.m-labels-list {
+    
+    @extend .container;
+    
+    .list {
+        list-style-type: none; 
+        padding: 0; 
+        font-weight: $font-weight-light; 
+        @extend .clearfix;
+        
+        li {
+            padding: 7px 15px; 
+            @extend .col-md-4;
+            @extend .col-sm-6;
+        }
+        
+        a {
+            font-size: 1.3em; 
+            max-width: 70%; 
+            overflow: hidden; 
+            text-overflow: ellipsis;
+            @extend .badge;
+            
+            &:hover {
+                background-color: $brand-primary;
+            }
+        }
+        small {
+            margin-left: 10px; 
+            font-size: 1em;
+        }
+    }
+    
+}  
+

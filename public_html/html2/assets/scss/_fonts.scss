@@ -1,0 +1,72 @@
+@import "compass/css3/font-face";
+
+@include font-face('Glyphicons Halflings', font-files(
+    "glyphicons-halflings-regular.svg", 
+    "glyphicons-halflings-regular.ttf", 
+    "glyphicons-halflings-regular.eot", 
+    "glyphicons-halflings-regular.woff", 
+    "glyphicons-halflings-regular.woff2"
+), "glyphicons-halflings-regular.eot");
+
+@include font-face('Open Sans', font-files(
+    "OpenSans-Regular-webfont.eot", 
+    "OpenSans-Regular-webfont.woff", 
+    "OpenSans-Regular-webfont.ttf", 
+    "OpenSans-Regular-webfont.svg#OpenSansRegular"
+), "OpenSans-Regular-webfont.eot", 400, "normal");
+
+/*@include font-face('Open Sans', font-files(
+    "OpenSans-Italic-webfont.eot", 
+    "OpenSans-Italic-webfont.woff", 
+    "OpenSans-Italic-webfont.ttf", 
+    "OpenSans-Italic-webfont.svg#OpenSansItalic"
+), "OpenSans-Italic-webfont.eot", 400, "italic");*/
+
+@include font-face('Open Sans', font-files(
+    "OpenSans-Light-webfont.eot", 
+    "OpenSans-Light-webfont.woff", 
+    "OpenSans-Light-webfont.ttf", 
+    "OpenSans-Light-webfont.svg#OpenSansLight"
+), "OpenSans-Light-webfont.eot", 200, "normal");
+
+/*@include font-face('Open Sans', font-files(
+    "OpenSans-LightItalic-webfont.eot", 
+    "OpenSans-LightItalic-webfont.woff", 
+    "OpenSans-LightItalic-webfont.ttf", 
+    "OpenSans-LightItalic-webfont.svg#OpenSansLightItalic"
+), "OpenSans-LightItalic-webfont.eot", 200, "italic");*/
+
+@include font-face('Open Sans', font-files(
+    "OpenSans-Semibold-webfont.eot", 
+    "OpenSans-Semibold-webfont.woff", 
+    "OpenSans-Semibold-webfont.ttf", 
+    "OpenSans-Semibold-webfont.svg#OpenSansSemibold"
+), "OpenSans-Semibold-webfont.eot", 500, "normal");
+
+@include font-face('Open Sans', font-files(
+    "OpenSans-Bold-webfont.eot", 
+    "OpenSans-Bold-webfont.woff", 
+    "OpenSans-Bold-webfont.ttf", 
+    "OpenSans-Bold-webfont.svg#OpenSansBold"
+), "OpenSans-Bold-webfont.eot", 700, "normal");
+
+/*@include font-face('Open Sans', font-files(
+    "OpenSans-BoldItalic-webfont.eot", 
+    "OpenSans-BoldItalic-webfont.woff", 
+    "OpenSans-BoldItalic-webfont.ttf", 
+    "OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic"
+), "OpenSans-BoldItalic-webfont.eot", 700, "italic");*/
+
+@include font-face('Open Sans', font-files(
+    "OpenSans-ExtraBold-webfont.eot", 
+    "OpenSans-ExtraBold-webfont.woff", 
+    "OpenSans-ExtraBold-webfont.ttf", 
+    "OpenSans-ExtraBold-webfont.svg#OpenSansExtraBold"
+), "OpenSans-ExtraBold-webfont.eot", 900, "normal");
+
+/*@include font-face('Open Sans', font-files(
+    "OpenSans-ExtraBoldItalic-webfont.eot", 
+    "OpenSans-ExtraBoldItalic-webfont.woff", 
+    "OpenSans-ExtraBoldItalic-webfont.ttf", 
+    "OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraBoldItalic"
+), "OpenSans-ExtraBoldItalic-webfont.eot", 900, "italic");*/

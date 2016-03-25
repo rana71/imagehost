@@ -1,0 +1,46 @@
+@import '_variables';
+
+.m-puppies-detector {
+    font-size: 1.3em;
+    display: none; 
+    position: fixed; 
+    top: 3px; 
+    right: 11px; 
+    width: 663px; 
+    z-index: 10000;
+    background-color: #e4e4e4; 
+    padding: 10px 20px; 
+    border: 1px solid #888; 
+    text-align: center; 
+    @include border-radius(5px);
+    @include box-shadow(rgba(0, 0, 0, .8) 0 0 45px);
+    
+    img {
+        @include border-radius(5px);
+        border: 1px solid #888; 
+        overflow: hidden; 
+        opacity: .5;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
+    strong.head {
+        font-size: 2em; 
+        color: $brand-primary;
+    }
+    
+    p {
+        margin: 10px auto; 
+    }
+    
+    .close-link {
+        text-align: right; 
+        
+        span {
+            cursor: pointer; 
+            text-decoration: underline; 
+        }
+    }
+}

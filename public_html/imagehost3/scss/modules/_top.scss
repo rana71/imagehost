@@ -1,0 +1,311 @@
+@import "_variables";;
+
+.m-top {
+    text-align: center; 
+    padding: 10px; 
+    position: fixed;
+    background-color: #fff; 
+    z-index: 999;
+    width: 100%; 
+/*    line-height: 1em;*/
+    font-size: 1.6em;
+    
+    
+    .left {
+/*        line-height:2em;*/
+        margin-top: 8px; 
+        float: left; 
+        
+        ul {
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            color: $brand-primary; 
+            
+        }
+        
+        li {
+            display: inline;
+            margin-right: 22px; 
+        }
+        
+        a {
+            color: $brand-primary; 
+        }
+        
+        .search {
+            
+            form {
+                border: solid $brand-primary; 
+                border-width: 0; 
+                padding: 4px 10px; 
+                @include inline-block;
+                @include border-radius(5px);
+                
+                .q {
+                    width: 0; 
+                    -webkit-transition: width .3s ease-in-out;
+                    -moz-transition: width .3s ease-in-out;
+                    -o-transition: width .3s ease-in-out;
+                    transition: width .3s ease-in-out;
+                    color: #676767; 
+                    font-weight: $font-weight-light; 
+                    border: 0; 
+                    outline: none;
+                    padding: 0; 
+                }
+                
+                .s {
+                    display: none;
+                }
+                
+                .text {
+                    font-weight: $font-weight-normal !important;
+                    position: relative; 
+                    bottom: 3px; 
+                    width: 58px; 
+                    text-align: right; 
+                    overflow: hidden; 
+                    -webkit-transition: width .3s ease-in-out;
+                    -moz-transition: width .3s ease-in-out;
+                    -o-transition: width .3s ease-in-out;
+                    transition: width .3s ease-in-out;
+                    @include inline-block;
+                }
+                
+                .icon {
+                    cursor: pointer; 
+                    font-size: 1.2em;
+                    position: relative; 
+                    top: 2px; 
+                    @extend .glyphicon; 
+                    @extend .glyphicon-search;
+                    
+                    &:hover, &:focus {
+                        color: #676767; 
+                    }
+                }
+            }
+            
+            &:hover .text {
+                text-decoration: underline; 
+                cursor: pointer;             
+            }
+            
+            &.active {
+                
+                form {
+                    border-width: 1px; 
+                }
+                
+                .q {
+                    width: 130px; 
+                }
+                
+                .text {
+                    width: 0; 
+                }
+            }
+            
+            
+            .link {
+                &:before {
+                    margin-right: 10px; 
+                    font-size: 1.2em;
+                    position: relative; 
+                    top: 5px; 
+                    @extend .glyphicon; 
+                    @extend .glyphicon-search;
+                }
+                &:hover {
+                    text-decoration:underline; 
+                    cursor:pointer; 
+                }
+            }
+        }
+        
+        .browse a {
+            &:before {
+                margin-right: 10px; 
+                font-size: 1.2em;
+                position: relative; 
+                top: 3px; 
+                @extend .glyphicon; 
+                @extend .glyphicon-eye-open;
+            }
+            
+            &:hover:before, &:focus:before {
+                color: #676767; 
+            }
+        }
+        
+        .random a{
+            &:before {
+                margin-right: 10px; 
+                font-size: 1.2em;
+                position: relative; 
+                top: 3px; 
+                @extend .glyphicon; 
+                @extend .glyphicon-random;
+            }
+            
+            &:hover:before, &:focus:before {
+                color: #676767; 
+            }
+        }
+    }
+ 
+    .logo {
+        line-height:2em;
+        margin: 0 auto; 
+        @include inline-block;
+    }
+     
+    .right {
+        /*line-height:2em;*/
+        margin-top: 5px;
+        @extend .pull-right;
+    }
+    
+    .upload {
+        margin-left: 10px;
+        font-size: 1em;
+        @extend .btn;
+        @extend .btn-primary;
+        
+        &:before {
+            font-size:1.2em;
+            margin-right: 12px;
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon; 
+            @extend .glyphicon-cloud-upload;
+        }
+    }
+    
+    .my-imged {
+        margin-left: 10px;
+        font-size: 1em;
+        @extend .btn;
+        @extend .btn-success;
+        
+        &:before {
+            font-size:1.2em;
+            margin-right: 12px; 
+            position: relative; 
+            top: 3px; 
+            @extend .glyphicon;
+            @extend .glyphicon-user;
+        }
+    }
+}
+
+#user-modal {
+    .sign-fb {
+        background-color: #4763b2; 
+        color: #fff; 
+        padding-left: 25px; 
+        padding-right: 25px; 
+        font-size: 1.1em;
+        @extend .btn;
+        @extend .pull-left;
+    }
+
+    .sign-in {
+        font-size: 1.1em;
+        padding-left: 25px; 
+        padding-right: 25px; 
+        @extend .pull-right;
+    }
+    
+    .forget-password {
+        font-weight: $font-weight-normal;
+        font-size: 0.9em;
+    }
+    
+    .l {
+        @extend .b;
+        border-bottom: 1px solid #d7d7d7; 
+        margin-top: 15px !important; 
+        margin-bottom: 25px !important; 
+        
+        span {
+            position: relative; 
+            top: 9px; 
+            background-color: #fff; 
+            padding: 0 10px; 
+            @include inline-block;
+            
+        }
+    }
+    
+    .b.sign-up {
+        margin-top: 20px; 
+        
+        a {
+            background-color: $brand-primary;
+            font-size: 1.3em;
+            @extend .btn;
+            @extend .btn-lg;  
+            @extend .btn-danger;
+            
+            &:before {
+                margin-right: 10px; 
+                
+                @extend .glyphicon;
+                @extend .glyphicon-user;
+            }
+        }
+    }
+}
+
+.m-top-margin {
+    padding-top: 70px; 
+}
+
+@media (max-width: 768px) {
+    
+    .m-top {
+        height: 110px; 
+        
+        .text {
+            display: none; 
+        }
+            
+        .logo {
+            float: left; 
+        }
+
+        .left {
+            display: block;
+            width: 100%; 
+        }
+
+        .right {
+            position: absolute; 
+            top: 10px; 
+            right: 0; 
+            
+            a:before, button:before {
+                margin-right: 0; 
+            }
+        }
+
+        .m-top {
+            padding: 5px; 
+        }
+
+        .search .text {
+            width: 0 !important; 
+        }
+
+        .fb-like {
+            display: none !important; 
+        }
+    }
+    
+    .m-top-margin {
+        padding-top: 110px;
+    }
+
+}

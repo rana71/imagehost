@@ -1,0 +1,571 @@
+@import '_variables';
+
+.m-artifact {
+    margin-top: 25px; 
+    margin-bottom: 30px; 
+    @extend .container;
+    
+    h1 {
+        margin-top: 0; 
+        @extend .text-left;
+    }
+    
+    .global-desc {
+        font-size: 1.6em; 
+        font-weight: $font-weight-light;
+    }
+    
+    .main {
+        @extend .col-sm-8;
+    }
+     
+    .sidebar {
+        @extend .col-sm-4;
+    }
+    
+    .navigation-thumbs {
+        h6 {
+            font-size: 1.6em; 
+            font-weight: $font-weight-bold;
+        }
+        
+        ul {
+            margin: 0; 
+            padding: 0; 
+            list-style-type: none; 
+        } 
+        
+        li {
+            background-color: #fff; 
+            padding: 1px; 
+            position: relative; 
+            margin-bottom: 7px; 
+            @include box-shadow(rgba(0, 0, 0, .1) 0 0 5px);
+            
+            a {
+                color: #676767;
+                text-decoration: none; 
+            }
+            
+            .thumb {
+                width: 80px; 
+                height: 80px; 
+                text-align: center; 
+                display: block; 
+                position: relative;
+                overflow: hidden; 
+                @extend .pull-left;
+                
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    height: 100%;
+                    width: auto;
+                    @include translate(-50%, -50%);
+                }
+            }
+            
+            p {
+                margin: 6px 10px 6px 95px;   
+                font-size: 1.2em; 
+                height: 68px; 
+                overflow: hidden;
+                text-overflow: ellipsis;  
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+            }
+            
+            &:before {
+                content: '';
+                width: 0; 
+                height: 0; 
+                position: absolute; 
+                top: 32px; 
+                left: 73px; 
+                border-style: solid;
+                border-width: 8px 8px 8px 0;
+                border-color: transparent #fff transparent transparent;
+                z-index: 9; 
+                -webkit-transform:rotate(360deg);
+                @include inline-block;
+            }
+            
+            &:hover {
+                cursor: pointer; 
+                background-color: $brand-primary;
+                
+                p {
+                    color: #fff;
+                }
+                
+                &:before {
+                    border-color: transparent $brand-primary transparent transparent;
+                }
+            }
+        }
+        
+    } 
+    
+    .elements {
+        margin: 0; 
+        padding: 1px; 
+        list-style-type: none; 
+        background-color: #fff; 
+        @include box-shadow(rgba(0, 0, 0, .1) 0 0 5px);
+        
+        
+        .thumb {
+            display: block; 
+            text-align: center; 
+            position: relative; 
+            
+            &:hover .options-overlay, &.show-overlay .options-overlay {
+                opacity: 1;
+            }
+            
+            .options-overlay {
+                opacity: 0; 
+                @include transition(opacity, .3s ease-out);
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                background-color: rgba(255, 255, 255, 0.9);
+                width: 100%; 
+                height: 100%; 
+                padding: 2em;
+                text-align: center; 
+                color: #333333; 
+                
+                .sharing .text {
+                    font-size: 3em; 
+                    font-weight: 700;
+                    margin-bottom: 1em;
+                }
+                
+                ul {
+                    margin: 2em auto auto; 
+                    padding: 0; 
+                    list-style-type: none; 
+                    font-size: 1.5em;
+                    text-align: left; 
+                    
+                    li{
+                        margin-bottom: 10px; 
+                        float: left; 
+                        width: 50%; 
+                        @include inline-block;
+                        
+                        a {
+                            display: block; 
+                            color: #333; 
+                            text-decoration: none;
+                        }
+                        
+                        .l {
+                            
+                            &:hover {
+                                cursor: pointer; 
+                                color: #5cb85c;
+                                
+                                &:before {
+                                    background-color: #5cb85c;
+                                }
+                            }
+
+                            span {
+                                margin-left: 8px; 
+                                position: relative; 
+                                bottom: 3px; 
+                            }
+
+                            &:before {
+                                background-color: #333;
+                                color: #fff;
+                                padding: 6px 10px;
+                                font-size: 1.5em;
+                                border-radius: 5px;
+                            }
+
+                            &.zoom:before {
+                                @extend .glyphicon;
+                                @extend .glyphicon-fullscreen;
+                            }
+
+                            &.create-meme:before, &.grab-photo:before {
+                                @extend .glyphicon;
+                                @extend .glyphicon-retweet;
+                            }
+
+                            &.get-code:before {
+                                @extend .glyphicon;
+                                @extend .glyphicon-paperclip;
+                            }
+
+                            &.get-link:before {
+                                @extend .glyphicon;
+                                @extend .glyphicon-link;
+                            }
+
+                            &.send-email:before {
+                                @extend .glyphicon;
+                                @extend .glyphicon-envelope;
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                    
+                }
+            }
+            
+            a.object {
+                display: block; 
+                
+                img {
+                    max-width: 100%; 
+                    min-width: 50%; 
+                }
+            }
+        }
+        
+        small {
+            display: block; 
+            font-size: 0.9em;
+            color: #b5b5b5;
+            padding: 7px 20px; 
+            text-align: center; 
+        }
+        
+        .info {
+            margin: 24px 20px; 
+            position: relative; 
+            @extend .container-fluid;
+            
+            .title {
+                @extend .row;
+                
+                h2 {
+                    margin: 0; 
+                    padding: 0; 
+                    font-size: 1.8em; 
+                    font-weight: $font-weight-bold;
+                    @extend .text-left;
+                    @extend .col-xs-10;
+                }
+
+                .options {
+                    font-size: 1.4em;
+                    font-weight: $font-weight-semibold;
+                    cursor: pointer; 
+                    @extend .text-right;
+                    @extend .col-xs-2;
+                    
+                    &:before {
+                        font-size: 1.2em;
+                        position: relative; 
+                        top: 3px; 
+                        margin-right: 5px; 
+                        @extend .glyphicon;
+                        @extend .glyphicon-cog;
+                    }
+                    
+                    &:hover, &.hightlighted {
+                        color: $brand-primary;
+                    }
+                }
+                
+                .options-tooltip {
+                    display: none;
+                    padding: 25px; 
+                    font-size: 1.2em;
+                    position: absolute; 
+                    top: -25px; 
+                    right: -306px; 
+                    background-color: #fff; 
+                    z-index: 99;
+                    width: 255px; 
+                    @include box-shadow(rgba(0, 0, 0, .5) 0 0 5px);
+                    
+                    &:before {
+                        content: '';
+                        width: 0; 
+                        height: 0; 
+                        position: absolute; 
+                        top: 25px; 
+                        left: -8px; 
+                        border-style: solid;
+                        border-width: 8px 8px 8px 0;
+                        border-color: transparent #fff transparent transparent;
+                        z-index: 9; 
+                        -webkit-transform:rotate(360deg);
+                        @include inline-block;
+                    }
+                    
+                    ul {
+                        list-style-type: none; 
+                        margin: 0; 
+                        padding: 0; 
+                        
+                        li {
+                            margin-bottom: 6px; 
+                            
+                            &:last-child {
+                                margin-bottom: 0; 
+                            }
+                        }
+                        
+                        a {
+                            color: #676765; 
+                            
+                            &:before {
+                                font-size: 1.2em;
+                                position: relative; 
+                                top: 3px; 
+                                margin-right: 5px; 
+                            }
+
+                            &:hover {
+                                color: $brand-primary;
+                            }
+                        }
+                        
+                        .create-meme:before {
+                            @extend .glyphicon; 
+                            @extend .glyphicon-retweet
+                        }
+                        
+                        .element-code:before {
+                            @extend .glyphicon;
+                            @extend .glyphicon-paperclip;
+                        }
+                    }
+                    
+                    .details {
+                        margin-top: 15px; 
+                        padding-top: 15px; 
+                        border-top: 1px solid #e0e0e0; 
+                        
+                        strong {
+                            font-weight: $font-weight-semibold;
+                        }
+                        
+                        ul {
+                            list-style-type: none; 
+                            margin: 0; 
+                            padding: 0; 
+                        }
+                        
+                        li {
+                            margin-top: 12px; 
+                        }
+                        
+                        span {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                    
+                }
+            }
+            
+            .desc {
+                margin-top: 10px; 
+                @extend .row;
+
+                figcaption {
+                    margin: 0; 
+                    padding: 0; 
+                    font-size: 1.4em; 
+                    font-weight: $font-weight-light; 
+                    @extend .col-xs-12;
+                }
+            }
+        }
+        
+        
+    }
+    
+    .informations {
+        padding: 25px; 
+        margin-top: 15px; 
+        background-color: #fff; 
+        
+        .stats {
+            line-height: 2em;
+            font-size: 1.4em; 
+            font-weight: $font-weight-bold;
+            @extend .col-xs-4;
+        }
+        
+        .global-options {
+            line-height: 2em;
+            font-size: 1.2em; 
+            font-weight: $font-weight-semibold;
+            @extend .text-right; 
+            @extend .col-xs-8;
+            
+            span, a {
+                margin-left: 25px; 
+                cursor: pointer; 
+                text-decoration: none; 
+                color: inherit;
+                
+                &:before {
+                    margin-right: 5px; 
+                    font-size: 1.3em;
+                    position: relative; 
+                    top: 3px; 
+                    @extend .glyphicon;
+                }
+                
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+            
+            .code:before {
+                @extend .glyphicon-link;
+            }
+            
+            .email:before {
+                @extend .glyphicon-envelope;
+            }
+            
+            .abuse:before {
+                @extend .glyphicon-flag;
+            }
+        }
+        
+        .tags {
+            margin: 25px 0 0 0; 
+            padding: 0;
+            list-style-type: none; 
+            
+            li {
+                margin: 0 10px 10px 0; 
+                @include inline-block;
+                
+                a {
+                    font-size: 1.4em; 
+                    font-weight: $font-weight-semibold;
+                    color: #8a8a8a; 
+                    text-decoration: none; 
+                    padding: 4px 15px; 
+                    display: block; 
+                    border: 1px solid #bdbdbd; 
+                    @include border-radius(5px);
+                    @include background-image(linear-gradient(#fefefe, #cdcdcd));
+                    
+                    &:hover {
+                        border-color: $brand-primary; 
+                        color: #fff;
+                        background-image: none; 
+                        background-color: $brand-primary !important;
+                    }
+                }
+            }
+        }
+        
+        .share {
+            margin-top: 15px; 
+            padding-top: 25px; 
+            border-top: 1px solid #e0e0e0; 
+            
+            .fb-like, .fb-share-button {
+                position: relative;  
+                bottom: 3px; 
+            }
+        }
+        
+        
+    }
+    
+    .informations-gray {
+        padding: 25px; 
+        background-color: #e5e5e5; 
+        font-size: 1.2em;
+        
+        span {
+            font-weight: $font-weight-bold;
+        }
+    }
+    
+    .comments {
+        margin-top: 15px; 
+        background-color: #fff; 
+        padding: 25px; 
+    }
+    
+    .modal.element-preview .modal-body {
+        text-align: center; 
+        
+        img {
+            max-width: 100%; 
+        }
+    }
+    
+    .modal.element-embeed {
+        
+        .modal-title {
+            text-align: left; 
+            line-height: 50px; 
+            
+            img {
+                max-height: 50px; 
+                float: left; 
+                margin-right: 20px; 
+            }
+        }
+    }
+    
+}
+
+#modal-embeed {
+    ul {
+        list-style-type: none; 
+        margin: 0; 
+        padding: 0; 
+        
+        li {
+            margin: 5px 0; 
+        }
+    }
+    
+    .embeed-info {
+        visibility: hidden;
+    }
+    
+    .go-copy {
+        @extend .btn;
+        @extend .btn-primary;
+        font-size: 17px; 
+        
+        &:before {
+            @extend .glyphicon;
+            @extend .glyphicon-link;
+        }
+    }
+    
+    input {
+        font-size: 1em !important; 
+    }
+    
+}
+
+
+@media (max-width: 992px) {
+    .options-overlay ul {
+        text-align: center !important;
+        width: 99% !important;
+        
+        li {
+            @include inline-block;
+            span {
+                display: none; 
+            }
+        }
+    }
+}
+

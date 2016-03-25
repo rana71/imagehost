@@ -1,0 +1,1 @@
+<div class="m-puppies-detector"></div>

@@ -1,0 +1,77 @@
+@import '_variables';
+
+.m-newsletter {
+    font-size: 1em;
+    
+    &.small-form {
+        background-image: url(/imagehost3/img/diagonal-bg.png);
+        padding: 5px; 
+        margin-bottom: 25px; 
+        @include box-shadow(rgba(0, 0, 0, .5) 0 0 5px);
+        
+        form {
+            padding: 20px 14px 28px; 
+            background-color: #fff;  
+            @extend .form-inline;
+        }
+        
+        .head {
+            color: $brand-primary;
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 10px; 
+            font-weight: $font-weight-normal;
+        }
+        
+        p {
+            margin-left: 12px; 
+            margin-right: 12px; 
+            font-size: 1.2em; 
+        }
+        
+        .r {
+            margin: 0; 
+            width: 100%; 
+            
+            .alert, .error-info {
+                font-size: 1.2em;
+                margin: 10px 0 0 0; 
+            }
+        }
+        
+        .email-cnt {
+            margin-right: 50px; 
+            
+            .email {
+                width: 100%; 
+                font-weight: $font-weight-light;
+                font-size: 1.6em !important;
+                height: 44px; 
+            }
+        }
+        
+        .button {
+            background-color: #00a51f; 
+            float: right; 
+            height: 44px; 
+            cursor: pointer !important; 
+            width: 44px; 
+            padding: 0; 
+            text-align: center; 
+            @include inline-block;
+            @extend .btn;
+            @extend .btn-success;
+            
+            i {
+                cursor: pointer !important; 
+                font-size:2.5em;
+                color: #fff; 
+/*                margin-right: 12px; 
+                position: relative; 
+                top: 3px; */
+                @extend .glyphicon;
+                @extend .glyphicon-ok-circle;
+            }
+        }
+    }
+}

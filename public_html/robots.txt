@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /plugins/feedback.php
+Sitemap: http://imged.pl/sitemap.xml

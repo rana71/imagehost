@@ -1,0 +1,46 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    background-color: #f6f6f6; 
+}
+
+.top {
+    text-align: center; 
+    background-color: #fff; 
+    
+    img {
+        padding-top: 8px; 
+        padding-bottom: 4px; 
+    }
+}
+
+.image {
+    background-image: url(../img/welcome1.jpg);
+    background-position: center; 
+    
+    color: #fff; 
+    text-align: center; 
+    
+    padding: 80px 60px; 
+}
+
+h1 {
+    margin-top: 0; 
+    font-size: 60px; 
+    text-shadow: 0 0 10px #000
+}
+ 
+h2 {
+    font-size: 40px; 
+    text-shadow: 0 0 5px #000
+}
+
+p {
+    font-size: 20px; 
+    text-shadow: 0 0 5px #000
+}
+
+.content {
+    text-align: center; 
+    padding-top: 60px; 
+}

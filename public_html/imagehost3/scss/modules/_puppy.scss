@@ -1,0 +1,50 @@
+@import '_variables';
+
+.puppy {
+    
+    text-align: center; 
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    max-width: 100%; 
+    overflow: hidden; 
+    
+    &.inline-video {
+        margin: 10px auto; 
+    }
+    
+    &.sticky {
+        position: fixed; 
+        left: 100%; 
+        bottom: 0; 
+        width: 100%; 
+        padding: 5px; 
+        background-color: rgba(255, 255, 255, .7);
+        margin: 0;
+        z-index: 999;
+            
+        .sticky-close {
+            float: right; 
+            color: #888; 
+            margin: 5px; 
+            cursor: pointer; 
+            
+            &:before {
+                margin-right: 5px; 
+                @extend .glyphicon;
+                @extend .glyphicon-ban-circle;
+            }
+            
+            &:hover {
+                color: #830000; 
+            }
+        }
+    }
+    
+    > * {
+        margin: auto; 
+    }
+    
+    * {
+        max-width: 100%; 
+    }
+} 
